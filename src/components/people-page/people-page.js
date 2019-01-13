@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import ItemList from '../item-list/';
 import PersonDetails from '../person-details';
-import ErrorIndicator from '../error-indicator';
 import ErrorBoundary from '../error-boundary';
 import SwapiService from '../../services/swapi-service';
 import Row from '../row';
@@ -24,8 +23,6 @@ export default class PeoplePage extends Component {
     };
 
     render() {
-
-        if (this.state.hasError) return <ErrorIndicator />;
 
         const itemList = (
             <ItemList
